@@ -1,0 +1,695 @@
+\documentclass[11pt]{amsart}
+
+\usepackage[a4paper,margin=2.3cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{aliascnt}
+\usepackage{mathtools}
+\usepackage{microtype}
+\microtypesetup{expansion=false}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{xurl}
+\usepackage{hyperref}
+\usepackage[nameinlink,capitalise,noabbrev]{cleveref}
+
+\begin{filecontents*}[overwrite]{induced-saturation-references.bib}
+@article{MartinSmith2012,
+  author  = {Ryan R. Martin and Jason J. Smith},
+  title   = {Induced saturation number},
+  journal = {Discrete Mathematics},
+  volume  = {312},
+  number  = {21},
+  pages   = {3096--3106},
+  year    = {2012},
+  doi     = {10.1016/j.disc.2012.06.015},
+  url     = {https://doi.org/10.1016/j.disc.2012.06.015},
+  note    = {\url{https://doi.org/10.1016/j.disc.2012.06.015}}
+}
+
+@article{BehrensEtAl2016,
+  author  = {Sarah Behrens and Catherine Erbes and Michael Santana and
+             Derrek Yager and Elyse Yeager},
+  title   = {Graphs with induced-saturation number zero},
+  journal = {The Electronic Journal of Combinatorics},
+  volume  = {23},
+  number  = {1},
+  pages   = {Paper No. P1.54},
+  year    = {2016},
+  doi     = {10.37236/5095},
+  url     = {https://doi.org/10.37236/5095},
+  note    = {\url{https://doi.org/10.37236/5095}}
+}
+
+@article{AxenovichCsikos2019,
+  author  = {Maria Axenovich and M{\'o}nika Csik{\'o}s},
+  title   = {Induced saturation of graphs},
+  journal = {Discrete Mathematics},
+  volume  = {342},
+  number  = {4},
+  pages   = {1195--1212},
+  year    = {2019},
+  doi     = {10.1016/j.disc.2019.01.006},
+  url     = {https://doi.org/10.1016/j.disc.2019.01.006},
+  note    = {\url{https://doi.org/10.1016/j.disc.2019.01.006}}
+}
+
+@misc{FanEtAl2025,
+  author        = {Xinyue Fan and Sahab Hajebi and Sepehr Hajebi and
+                   Sophie Spirkl},
+  title         = {Halfway to induced saturation for even cycles},
+  year          = {2025},
+  eprint        = {2505.24100},
+  archiveprefix = {arXiv},
+  primaryclass  = {math.CO},
+  doi           = {10.48550/arXiv.2505.24100},
+  url           = {https://arxiv.org/abs/2505.24100},
+  note          = {arXiv:2505.24100v2 [math.CO],
+                   \url{https://arxiv.org/abs/2505.24100}}
+}
+
+@misc{FanEtAl2026,
+  author        = {Xinyue Fan and Sahab Hajebi and Sepehr Hajebi and
+                   Sophie Spirkl},
+  title         = {Asymmetric induced saturation},
+  year          = {2026},
+  eprint        = {2606.24763},
+  archiveprefix = {arXiv},
+  primaryclass  = {math.CO},
+  doi           = {10.48550/arXiv.2606.24763},
+  url           = {https://arxiv.org/abs/2606.24763},
+  note          = {arXiv:2606.24763v1 [math.CO],
+                   \url{https://arxiv.org/abs/2606.24763}}
+}
+
+@article{ConderDobcsanyi2002,
+  author  = {Marston Conder and Peter Dobcs{\'a}nyi},
+  title   = {Trivalent symmetric graphs on up to 768 vertices},
+  journal = {Journal of Combinatorial Mathematics and Combinatorial Computing},
+  volume  = {40},
+  pages   = {41--63},
+  year    = {2002},
+  url     = {https://combinatorialpress.com/jcmcc-articles/volume-040/trivalent-symmetric-graphs-on-up-to-768-vertices/},
+  note    = {\url{https://combinatorialpress.com/jcmcc-articles/volume-040/trivalent-symmetric-graphs-on-up-to-768-vertices/}}
+}
+
+@article{ConderPotocnik2026,
+  author  = {Marston D. E. Conder and Primo{\v{z}} Poto{\v{c}}nik},
+  title   = {Edge-transitive cubic graphs: analysis, cataloguing and enumeration},
+  journal = {Journal of Algebra},
+  volume  = {685},
+  pages   = {703--737},
+  year    = {2026},
+  doi     = {10.1016/j.jalgebra.2025.07.035},
+  url     = {https://doi.org/10.1016/j.jalgebra.2025.07.035},
+  note    = {\url{https://doi.org/10.1016/j.jalgebra.2025.07.035}}
+}
+
+@misc{GraphSymCAT1823,
+  author       = {Marston D. E. Conder and Primo{\v{z}} Poto{\v{c}}nik},
+  title        = {{CAT(182,3)} description},
+  howpublished = {Foster Census, GraphSym},
+  url          = {https://fostercensus.graphsym.net/files/CAT-descriptions/CAT_182_3.html},
+  note         = {Accessed 25 July 2026,
+                  \url{https://fostercensus.graphsym.net/files/CAT-descriptions/CAT_182_3.html}}
+}
+
+@article{Coxeter1950,
+  author  = {H. S. M. Coxeter},
+  title   = {Self-dual configurations and regular graphs},
+  journal = {Bulletin of the American Mathematical Society},
+  volume  = {56},
+  number  = {5},
+  pages   = {413--455},
+  year    = {1950},
+  doi     = {10.1090/S0002-9904-1950-09407-5},
+  url     = {https://doi.org/10.1090/S0002-9904-1950-09407-5},
+  note    = {\url{https://doi.org/10.1090/S0002-9904-1950-09407-5}}
+}
+
+@article{HarutyunyanEtAl2016,
+  author  = {Ararat Harutyunyan and Reza Naserasr and Mirko Petru{\v{s}}evski
+             and Riste {\v{S}}krekovski and Qiang Sun},
+  title   = {Mapping planar graphs into the {Coxeter} graph},
+  journal = {Discrete Mathematics},
+  volume  = {339},
+  number  = {2},
+  pages   = {839--849},
+  year    = {2016},
+  doi     = {10.1016/j.disc.2015.10.007},
+  url     = {https://doi.org/10.1016/j.disc.2015.10.007},
+  note    = {\url{https://doi.org/10.1016/j.disc.2015.10.007}}
+}
+\end{filecontents*}
+
+\hypersetup{
+  pdftitle={Two Computationally Certified Induced-Saturated Graphs for C12 and C14},
+  pdfauthor={Romeo Mugnier de Almeida},
+  colorlinks=true,
+  linkcolor=blue!45!black,
+  citecolor=green!35!black,
+  urlcolor=blue!55!black
+}
+\urlstyle{same}
+
+\newcommand{\Ck}[1]{C_{#1}}
+\newcommand{\Pk}[1]{P_{#1}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Gtwelve}{G_{12}}
+\newcommand{\Gfourteen}{G_{14}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+\newtheorem{theorem}{Theorem}[section]
+\newaliascnt{lemma}{theorem}
+\newtheorem{lemma}[lemma]{Lemma}
+\aliascntresetthe{lemma}
+\crefname{lemma}{Lemma}{Lemmas}
+\Crefname{lemma}{Lemma}{Lemmas}
+\newaliascnt{proposition}{theorem}
+\newtheorem{proposition}[proposition]{Proposition}
+\aliascntresetthe{proposition}
+\crefname{proposition}{Proposition}{Propositions}
+\Crefname{proposition}{Proposition}{Propositions}
+\newaliascnt{corollary}{theorem}
+\newtheorem{corollary}[corollary]{Corollary}
+\aliascntresetthe{corollary}
+\crefname{corollary}{Corollary}{Corollaries}
+\Crefname{corollary}{Corollary}{Corollaries}
+\newtheorem{maintheorem}{Theorem}
+\renewcommand{\themaintheorem}{\Alph{maintheorem}}
+\theoremstyle{definition}
+\newaliascnt{definition}{theorem}
+\newtheorem{definition}[definition]{Definition}
+\aliascntresetthe{definition}
+\crefname{definition}{Definition}{Definitions}
+\Crefname{definition}{Definition}{Definitions}
+\theoremstyle{remark}
+\newaliascnt{remark}{theorem}
+\newtheorem{remark}[remark]{Remark}
+\aliascntresetthe{remark}
+\crefname{remark}{Remark}{Remarks}
+\Crefname{remark}{Remark}{Remarks}
+\crefname{maintheorem}{theorem}{theorems}
+\Crefname{maintheorem}{Theorem}{Theorems}
+
+\setlist[enumerate]{leftmargin=2.35em}
+\setlist[itemize]{leftmargin=2.1em}
+\emergencystretch=2em
+\raggedbottom
+
+\title[Induced-saturated graphs for \(\Ck{12}\) and \(\Ck{14}\)]
+{Two Computationally Certified Induced-Saturated Graphs\\
+for \(\Ck{12}\) and \(\Ck{14}\)}
+\author{Romeo Mugnier de Almeida}
+\date{Preliminary version, 25 July 2026}
+\keywords{induced saturation, even cycle, Coxeter graph, Foster Census,
+computational certificate}
+
+\begin{document}
+
+\begin{abstract}
+We give computer-assisted proofs for two explicit induced-saturated graphs.
+The graph specified by a released \(182\)-vertex edge list and isomorphic to
+the Foster Census graph \(\mathrm{CAT}(182,3)\) is
+\(\Ck{12}\)-induced-saturated, and the Coxeter graph in its Fano-plane model is
+\(\Ck{14}\)-induced-saturated.  An elementary certificate lemma reduces both
+claims to finite statements about cycles with unique chords and induced paths
+with prescribed endpoints.  Machine-readable certificates give one witness
+for every edge and nonedge, while separately written exhaustive programs
+recompute the relevant cycle and path data.  For the Coxeter graph, a further
+C++ program examines all \(\binom{28}{14}=40{,}116{,}600\) vertex subsets to
+check the negative condition.  These computations are not proof-assistant
+formalizations.  We make no claim of priority or minimality.
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}\label{sec:introduction}
+
+For a fixed graph \(H\), an \(H\)-induced-saturated graph contains no induced
+copy of \(H\), while deleting any present edge and adding any missing edge
+each creates an induced copy of \(H\).  Martin and Smith introduced an
+induced-saturation number in a generalized-graph framework
+~\cite{MartinSmith2012}.  Behrens, Erbes, Santana, Yager, and Yeager later
+studied the zero case, which yields ordinary \(H\)-induced-saturated graphs
+~\cite{BehrensEtAl2016}; further existence results were obtained by Axenovich
+and Csik{\'o}s~\cite{AxenovichCsikos2019}.
+
+Even cycles provide a particularly concrete existence problem.  Fan, Hajebi,
+Hajebi, and Spirkl construct induced-saturated graphs for the even cycles
+through \(\Ck{10}\), and deletion-saturated graphs for every even cycle
+~\cite{FanEtAl2025}.  Their subsequent work records that the existence of
+induced-saturated graphs for all even cycles remains open
+~\cite{FanEtAl2026}.  The present preliminary note records two finite
+constructions for \(\Ck{12}\) and \(\Ck{14}\).
+
+\begin{maintheorem}\label{thm:c12}
+The graph defined by the released \(182\)-vertex edge list, which is
+isomorphic to \(\mathrm{CAT}(182,3)\), is
+\(\Ck{12}\)-induced-saturated.
+\end{maintheorem}
+
+\begin{maintheorem}\label{thm:c14}
+The Coxeter graph is \(\Ck{14}\)-induced-saturated.
+\end{maintheorem}
+
+Both proofs use the same reduction.  For an edge deletion we exhibit a cycle
+in which the deleted edge is the unique chord.  For a nonedge addition we
+exhibit an induced path on the required number of vertices whose endpoints
+are the added pair.  The graph-theoretic claims are thereby reduced to
+finite, explicitly enumerated statements.
+
+This preliminary note does not establish priority for either construction.
+Its purpose is to record explicit, independently checkable computational
+certificates.  No claim of minimality is made.
+% TODO before public release: insert permanent repository URL
+
+\section{Definitions and the certificate lemma}\label{sec:certificate}
+
+All graphs are finite, simple, and undirected.  For a graph \(G\), write
+\(V(G)\) and \(E(G)\) for its vertex and edge sets.  If \(e\in E(G)\), then
+\(G-e\) denotes deletion of \(e\).  If \(uv\notin E(G)\) with \(u\ne v\),
+then \(G+uv\) denotes addition of the edge \(uv\).  We write \(\Ck{k}\) for
+the cycle on \(k\) vertices and \(\Pk{k}\) for the path on \(k\) vertices.
+
+\begin{definition}
+Let \(H\) be a graph.  A graph \(G\) is \emph{\(H\)-induced-saturated} if
+\begin{enumerate}[label=\textup{(\roman*)}]
+  \item \(G\) contains no induced copy of \(H\);
+  \item for every \(e\in E(G)\), the graph \(G-e\) contains an induced copy
+        of \(H\); and
+  \item for every \(uv\notin E(G)\), the graph \(G+uv\) contains an induced
+        copy of \(H\).
+\end{enumerate}
+\end{definition}
+
+A \emph{chord} of a specified cycle is an edge joining two nonconsecutive
+vertices of that cycle.
+
+\begin{lemma}[Certificate lemma]\label{lem:certificate}
+Let \(G\) be a graph and let \(k\geq 4\).
+\begin{enumerate}[label=\textup{(\alph*)}]
+  \item If every \(k\)-cycle in \(G\) has at least one chord, then \(G\)
+        contains no induced \(\Ck{k}\).
+  \item If every edge \(e\in E(G)\) is the unique chord of some
+        \(k\)-cycle, then \(G-e\) contains an induced \(\Ck{k}\).
+  \item If every nonedge \(uv\) is the endpoint pair of an induced path on
+        \(k\) vertices, then \(G+uv\) contains an induced \(\Ck{k}\).
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+An induced \(k\)-cycle is precisely a \(k\)-cycle with no chord, which proves
+\textup{(a)}.  For \textup{(b)}, let \(Q\) be a \(k\)-cycle whose only chord
+is \(e\).  After deleting \(e\), the subgraph induced by \(V(Q)\) consists
+exactly of the cycle edges of \(Q\).  For \textup{(c)}, an induced path on
+\(k\) vertices has \(k-1\) edges and no further edges among its vertices.
+Adding the edge between its endpoints therefore creates an induced
+\(k\)-cycle.
+\end{proof}
+
+\begin{remark}\label{rem:evidence-layers}
+Stored-certificate validation and independent recomputation are distinct.
+The former checks that each listed cycle or path is a valid witness and that
+the witness keys give exact toggle coverage.  The latter enumerates the
+relevant objects directly from the graph, without using the stored witness
+chosen for a particular toggle.
+\end{remark}
+
+\section{A \texorpdfstring{\(\Ck{12}\)}{C12}-induced-saturated graph}
+\label{sec:c12}
+
+\subsection{Construction and graph identity}
+
+Let \(\Gtwelve\) be the released edge-list graph.  Its vertex set is
+\(\{0,1,\ldots,181\}\), and its edges are listed in
+\texttt{CAT182\_3.edgelist}.  The strict verifier reconstructs this graph and
+obtains
+\[
+  |V(\Gtwelve)|=182,\qquad |E(\Gtwelve)|=273,\qquad
+  \binom{182}{2}-273=16{,}198
+\]
+nonedges.  It also checks that every vertex has degree \(3\) and that the
+graph is connected.
+
+Graph identity is checked separately from induced saturation.  The
+certificate contains an LCF shift sequence whose reconstructed edge set is
+exactly the released edge-list graph.  The direct GraphSym description
+accessed on 25 July 2026 lists the same shift sequence for
+\(\mathrm{CAT}(182,3)\)~\cite{GraphSymCAT1823}.  An alternative Foster Census
+LCF description included in the bundle is textually different; a separate
+NetworkX \texttt{GraphMatcher} computation reconstructs both graphs and
+returns an isomorphism with \(182\) mapping entries.  Thus the claim made here
+is that the edge-list graph is \emph{isomorphic to}
+\(\mathrm{CAT}(182,3)\); no equality of differently labelled census
+representations is asserted.  For census context and the current catalogue,
+see~\cite{ConderDobcsanyi2002,ConderPotocnik2026}.
+
+\subsection{Cycles and edge deletions}
+
+\begin{proposition}\label{prop:c12-cycles}
+The graph \(\Gtwelve\) has exactly \(273\) simple \(12\)-cycles.  Every such
+cycle has exactly one chord, and every edge of \(\Gtwelve\) is the unique
+chord of exactly one such cycle.
+\end{proposition}
+
+The primary program exhaustively extends simple \(11\)-edge paths on
+\(12\) distinct vertices and closes them when the last vertex is adjacent to
+the initial vertex.  It fixes the least cycle vertex as the start and breaks reversal
+symmetry by comparing the second and last vertices.  For every retained
+cyclic order it subtracts the \(12\) ring edges from the full induced edge
+set.  The result is the following complete chord distribution.
+
+\begin{table}[htbp]
+\centering
+\caption{Chord distribution of the simple \(12\)-cycles in \(\Gtwelve\).}
+\label{tab:c12-chords}
+\begin{tabular}{@{}rr@{}}
+\toprule
+Number of chords & Number of \(12\)-cycles \\
+\midrule
+1 & 273 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+A separately written standard-library verifier instead generates oriented
+simple \(12\)-cycles from every start and canonicalizes only after closure by
+rotation and reversal.  It reproduces the \(273\)-cycle count, the chord
+histogram, and multiplicity one on every edge.  It also performs a direct
+incremental chord-rejecting search in the original graph and finds no induced
+\(\Ck{12}\).  For every edge \(e\), a further direct search in
+\(\Gtwelve-e\), without reading the stored witness for \(e\), finds an
+induced \(\Ck{12}\).
+
+The certificate separately stores one cyclic order for every edge.  Its
+validator checks distinct and in-range vertices, all ring edges, the absence
+of unintended induced edges, and that the indexed edge is the unique chord.
+All \(273\) stored deletion witnesses pass.
+
+\subsection{Induced paths and nonedge additions}
+
+\begin{proposition}\label{prop:c12-paths}
+The graph \(\Gtwelve\) has exactly \(218{,}946\) induced paths on
+\(12\) vertices, counted up to reversal.  The set of endpoint pairs of these
+paths is precisely the set of all \(16{,}198\) nonedges of \(\Gtwelve\).
+\end{proposition}
+
+The exhaustive path search starts at every vertex and extends through every
+unused neighbour of the current endpoint.  A new endpoint is accepted
+exactly when it has no neighbour among the earlier path vertices other than
+the current endpoint.  This condition is necessary and sufficient to
+preserve inducedness.  At \(12\) vertices, the program retains the orientation
+whose initial endpoint has smaller label.  Both implementations obtain
+\(218{,}946\) paths and exact coverage of the \(16{,}198\) nonedges.  This
+second computation proves every addition case without using the stored
+addition witnesses; it is an exhaustive induced-path endpoint computation,
+not a separate generic induced-cycle search in each augmented graph.
+
+The certificate stores one induced \(12\)-vertex path for each nonedge.
+For every entry the strict validator checks \(12\) distinct vertices, the
+\(11\) consecutive path edges, the absence of any other induced edge, and
+the exact endpoint pair.  It then checks the toggled induced subgraph.
+All \(16{,}198\) stored addition witnesses pass.
+
+\begin{proof}[Proof of \Cref{thm:c12}]
+By \cref{prop:c12-cycles}, every \(12\)-cycle in \(\Gtwelve\) has a chord, so
+\cref{lem:certificate}\textup{(a)} implies that \(\Gtwelve\) contains no
+induced \(\Ck{12}\).  The same proposition states that every edge is the
+unique chord of a \(12\)-cycle, so \cref{lem:certificate}\textup{(b)}
+implies that every edge deletion creates an induced \(\Ck{12}\).
+Finally, \cref{prop:c12-paths} supplies an induced path on \(12\) vertices
+between the endpoints of every nonedge.  Hence
+\cref{lem:certificate}\textup{(c)} implies that every nonedge addition
+creates an induced \(\Ck{12}\).
+\end{proof}
+
+\section{The Coxeter graph and \texorpdfstring{\(\Ck{14}\)}{C14}}
+\label{sec:c14}
+
+\subsection{Fano-plane construction}
+
+Work in \(\Z_7=\{0,1,\ldots,6\}\), with arithmetic modulo \(7\), and let
+\[
+  \mathcal L=\bigl\{\{i,i+1,i+3\}:i\in\Z_7\bigr\}.
+\]
+These are the seven lines of a Fano plane.  Define \(\Gfourteen\) by
+\begin{equation}\label{eq:coxeter-fano}
+  V(\Gfourteen)=\binom{\Z_7}{3}\setminus\mathcal L,
+  \qquad
+  XY\in E(\Gfourteen)\quad\Longleftrightarrow\quad X\cap Y=\varnothing .
+\end{equation}
+This is the standard nonline-triples model of the Coxeter graph
+~\cite{Coxeter1950,HarutyunyanEtAl2016}.
+
+There are \(\binom{7}{3}-7=28\) vertices.  We include the cubicity argument.
+Fix a nonline triple \(X\).  Each of its three pairs belongs to a distinct
+Fano line meeting \(X\) in two points; these three lines account for six of
+the nine point-line incidences involving the points of \(X\).  The remaining
+three incidences occur on three further lines, each meeting \(X\) in one
+point.  Consequently exactly six Fano lines meet \(X\), and exactly one Fano
+line is disjoint from \(X\).  The four triples contained in the four-point
+complement \(\Z_7\setminus X\) are precisely the possible disjoint triples.
+Exactly one is the disjoint Fano line, so the other three are graph
+neighbours of \(X\).  Thus \(\Gfourteen\) is cubic, has \(42\) edges, and has
+\(\binom{28}{2}-42=336\) nonedges.
+
+The released Python verifiers reconstruct \(\Gfourteen\) from
+\cref{eq:coxeter-fano}.  They check exact agreement with the
+\(28\)-entry lexicographic triple-label map, the \(42\)-edge file, and the
+label map embedded in the certificate.  The primary verifier also recomputes
+connectedness, girth \(7\), diameter \(4\), and the unordered-pair distance
+distribution
+\[
+  d_1:42,\qquad d_2:84,\qquad d_3:168,\qquad d_4:84.
+\]
+The released programs do not compare this graph with an external Coxeter
+graph file; the identification as the Coxeter graph comes from the standard
+Fano-plane model cited above.
+
+\subsection{Cycles and edge deletions}
+
+\begin{proposition}\label{prop:c14-cycles}
+The Coxeter graph has exactly \(420\) simple \(14\)-cycles.  Of these,
+\(252\) have one chord and \(168\) have two chords; none has zero chords.
+Every edge is the unique chord of exactly six \(14\)-cycles.
+\end{proposition}
+
+\begin{table}[htbp]
+\centering
+\caption{Chord distribution of the simple \(14\)-cycles in the Coxeter graph.}
+\label{tab:c14-chords}
+\begin{tabular}{@{}rr@{}}
+\toprule
+Number of chords & Number of \(14\)-cycles \\
+\midrule
+0 & 0 \\
+1 & 252 \\
+2 & 168 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The primary verifier uses a minimum-rooted depth-first search and breaks
+reversal symmetry.  A separately written verifier uses integer adjacency
+masks, forms cycles by pairing internally vertex-disjoint \(7\)-edge paths
+with common endpoints, and canonicalizes under every rotation and reversal.
+Both exhaustive methods give the distribution in
+\cref{tab:c14-chords}.  The \(252\) one-chord cycles distribute uniformly:
+each of the \(42\) edges is the unique chord six times.
+
+The certificate contains one cyclic order for every edge.  Both Python
+programs validate all \(42\) entries as unique-chord witnesses; the primary
+program also deletes the indexed chord and tests that the selected induced
+subgraph is connected and \(2\)-regular.
+
+\subsection{Induced paths and nonedge additions}
+
+\begin{proposition}\label{prop:c14-paths}
+The Coxeter graph has exactly \(5{,}040\) induced paths on \(14\) vertices,
+counted up to reversal.  Every nonedge is the endpoint pair of at least one
+such path.  The exact endpoint multiplicities are given in
+\cref{tab:c14-paths}.
+\end{proposition}
+
+\begin{table}[htbp]
+\centering
+\caption{Endpoint multiplicities for induced \(14\)-vertex paths.}
+\label{tab:c14-paths}
+\begin{tabular}{@{}rrr@{}}
+\toprule
+Endpoint distance & Number of nonedges & Paths per pair \\
+\midrule
+2 & 84  & 4 \\
+3 & 168 & 18 \\
+4 & 84  & 20 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Both complete path searches use the same mathematical extension criterion as
+in \cref{prop:c12-paths}, but one stores adjacency sets and the other integer
+masks.  They agree on exact nonedge coverage and on
+\[
+  84\cdot4+168\cdot18+84\cdot20=5{,}040.
+\]
+The certificate separately stores one path for every nonedge.  Both Python
+programs validate the exact endpoints, \(14\) distinct vertices, the
+\(13\) path edges, and the absence of any other edge on the selected
+vertices.  The primary program also adds the indexed nonedge and checks
+connected \(2\)-regularity.  All \(336\) addition witnesses pass.
+
+\begin{proof}[Proof of \Cref{thm:c14}]
+By \cref{prop:c14-cycles}, every \(14\)-cycle in the Coxeter graph has a
+chord.  Thus \cref{lem:certificate}\textup{(a)} implies that the graph
+contains no induced \(\Ck{14}\).  The same proposition states that every edge
+is the unique chord of a \(14\)-cycle, so
+\cref{lem:certificate}\textup{(b)} implies that every edge deletion creates
+an induced \(\Ck{14}\).  Finally, \cref{prop:c14-paths} gives an induced path
+on \(14\) vertices between the endpoints of every nonedge.
+\Cref{lem:certificate}\textup{(c)} therefore implies that every nonedge
+addition creates an induced \(\Ck{14}\).
+\end{proof}
+
+\section{Computational verification and reproducibility}
+\label{sec:repro}
+
+\subsection{Verification layers}
+
+The released computations keep the following logically different tasks
+separate.
+
+For \(\Gtwelve\), the primary program constructs the graph from an embedded
+LCF shift sequence and exhaustively enumerates the \(12\)-cycles and induced
+\(12\)-vertex paths.  Its essential gates use Python \texttt{assert}, so it
+must not be run with \texttt{python -O}.  The separately written verifier
+instead reads the edge list and certificate and uses only the Python standard
+library.  It rejects duplicate raw JSON object keys and duplicate normalized
+toggle keys, checks exact graph and certificate coverage, and uses explicit
+runtime checks rather than assertions.  In addition to validating every
+stored witness, it implements a different cycle canonicalization, a direct
+induced-cycle search in the original graph, direct searches after all
+\(273\) edge deletions, and an exhaustive induced-path endpoint computation
+covering all \(16{,}198\) additions.  It shares the certificate reduction
+with the primary program but imports none of its code.
+
+For \(\Gfourteen\), both Python verifiers begin from
+\cref{eq:coxeter-fano}, read all three released data representations, and
+validate all \(378\) stored toggle witnesses.  Their JSON readers reject
+duplicate raw object keys, noncanonical pair keys, and normalization
+collisions.  Neither program contains a correctness-critical
+\texttt{assert}; all gates remain active under \texttt{python -O}.  The
+second program is a separately written, code-independent implementation
+using integer masks, meet-in-the-middle cycle assembly, a different
+rotation/reversal canonicalization, and a bit-mask induced-path search.  The
+two programs implement the same mathematical reduction and share only the
+released data format.
+
+\begin{table}[H]
+\centering
+\caption{Roles of the computational checks.}
+\label{tab:evidence}
+\begin{tabular}{@{}L{0.25\textwidth}L{0.67\textwidth}@{}}
+\toprule
+Check & What it establishes \\
+\midrule
+Certificate validation &
+Every stored order is a valid toggle witness, and the distinct canonical
+keys cover exactly all edges or all nonedges. \\
+\addlinespace
+Independent recomputation &
+Cycles, chords, induced paths, and endpoint coverage are recomputed from the
+graph without using the stored witness selected for a toggle. \\
+\addlinespace
+Exhaustive enumeration &
+The described finite cycle, path, or fixed-size subset search space is
+traversed completely. \\
+\addlinespace
+Graph identity &
+Exact labelled edge-set equality or a separately executed graph-isomorphism
+test relates released representations. \\
+\addlinespace
+File integrity &
+SHA-256 digests identify the released bytes; they do not prove any
+graph-theoretic statement. \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{The all-subsets check}
+
+The C++20 program for \(\Gfourteen\) supplies a third check of the negative
+condition.  It reconstructs the graph from the Fano-plane definition and
+enumerates exactly
+\[
+  \binom{28}{14}=40{,}116{,}600
+\]
+subsets of \(14\) vertices in the original graph.  On each subset it computes
+all induced degrees and, if every degree is \(2\), checks connectedness.  A
+simple \(14\)-vertex graph is an induced \(\Ck{14}\) exactly when it is
+connected and \(2\)-regular.  The program examines the full subset count and
+finds none.  This C++ program checks only the absence of an induced
+\(\Ck{14}\) in the original graph; it does not check either toggle condition,
+the certificate, the edge file, or the label map.
+
+\subsection{Reruns, software, and file integrity}
+
+Fresh runs from clean extractions reproduced the mathematical output of both
+core C12 programs and both C14 Python programs.  The C14 C++ source compiled
+with C++20 and strict warning flags, and both the optimized and
+AddressSanitizer/UndefinedBehaviorSanitizer runs examined all
+\(40{,}116{,}600\) subsets without a diagnostic.  The core Python programs
+require Python 3; all except the optional C12 graph-identity comparison use
+only the standard library.  That optional comparison requires NetworkX.
+
+The optional stored C12 identity log records the SHA-256 digest of an earlier
+full census file rather than the digest of the extracted LCF line now
+bundled.  A fresh run against the manifest-checked bundled line nevertheless
+reproduces the graph-level conclusions: equal order and size, girth \(7\),
+diameter \(8\), and an isomorphism with \(182\) mapping entries.  The
+isomorphism claim in \cref{sec:c12} relies on this fresh run, not on equality
+of the two digest lines.
+
+Both \texttt{SHA256SUMS.txt} manifests pass for every listed payload file.
+These hashes detect accidental changes and identify the inputs included in
+the released bundles.  They are not evidence that a program was executed and
+are not mathematical evidence for induced saturation.  The README files give
+the interpreter and compiler commands needed to reproduce the computations.
+
+\section{Concluding remarks}\label{sec:conclusion}
+
+The same short certificate lemma accounts for both constructions: cycles
+with a prescribed unique chord control deletions, while induced paths with a
+prescribed endpoint pair control additions.  The enumerations reveal further
+regularity not needed for the proofs.  In \(\Gtwelve\), unique-chord
+\(12\)-cycles correspond one-to-one with edges.  In the Coxeter graph, every
+edge occurs six times as a unique chord, and the induced-path multiplicity
+depends only on endpoint distance.
+
+The examples do not address minimum order, nor do they by themselves give a
+general construction for longer even cycles.  It remains natural to ask
+whether comparable certificates occur in other cubic symmetric graphs and
+whether automorphism-orbit arguments can compress the released witnesses.
+No claim of priority or minimality is made for either graph.
+
+\section*{Acknowledgements}
+
+AI tools assisted in candidate generation and in drafting portions of the
+verification code and exposition. The claims recorded here are supported by
+the accompanying machine-readable certificates and exhaustive verification
+programs described in \cref{sec:repro}. These computations are not formal
+proof-assistant developments, and some implement the same mathematical
+reduction. This manuscript is a preliminary computational record and has not
+been peer reviewed.
+
+\bibliographystyle{amsplain}
+\bibliography{induced-saturation-references}
+
+\end{document}

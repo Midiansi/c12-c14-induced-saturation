@@ -1,0 +1,14 @@
+Compiler version:
+Apple clang version 17.0.0 (clang-1700.0.13.5)
+Target: arm64-apple-darwin25.3.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+Compile command: c++ -std=c++20 -O2 -Wall -Wextra -Wpedantic -Wconversion -Wshadow verify_no_induced_C14.cpp -o verify_no_induced_C14
+Compiler diagnostics: none
+Run command: /usr/bin/time -p ./verify_no_induced_C14
+NO induced C14
+14-subsets examined: 40116600
+elapsed seconds: 0.259348
+real 0.79
+user 0.26
+sys 0.00

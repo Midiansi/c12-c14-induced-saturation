@@ -1,0 +1,35 @@
+networkx: 3.6.1
+certificate SHA-256: 4e9e7a806c4aba4c087a568b6866c1cdfa28f4f57bd1270c2f0b89a7a6ed0f77
+official CAT_lcf.txt SHA-256: ed659ec12aaab934021ed1174ddec14b2177d47ee126171da7616f01b678354d
+shift sequences textually equal: False
+uploaded graph order/size: 182 273
+official graph order/size: 182 273
+uploaded girth/diameter: 7 8
+official girth/diameter: 7 8
+isomorphic: True
+isomorphism seconds: 2.627959
+mapping entries: 182
+mapping first 20 by uploaded label: [(0, 0), (1, 1), (2, 2), (3, 3), (4, 4), (5, 5), (6, 6), (7, 127), (8, 128), (9, 129), (10, 9), (11, 10), (12, 152), (13, 153), (14, 180), (15, 181), (16, 94), (17, 93), (18, 92), (19, 91)]
+	Command being timed: "python3 /mnt/data/compare_official_CAT182_3.py /mnt/data/CAT182_3_C12_witness_certificate(2).json /mnt/data/official_CAT_lcf.txt"
+	User time (seconds): 3.60
+	System time (seconds): 0.05
+	Percent of CPU this job got: 109%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:03.34
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 128672
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 25643
+	Voluntary context switches: 11
+	Involuntary context switches: 42
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

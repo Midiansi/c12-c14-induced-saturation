@@ -1,0 +1,25 @@
+HOSTILE INDEPENDENT VERIFIER
+python: 3.13.5 (main, May  5 2026, 21:05:52) [GCC 14.2.0]
+platform: Linux-6.12.13-x86_64-with-glibc2.41
+third-party packages used: none
+edge-list SHA-256: e92fde49855c80f8bb942d5f0e069a5cbab455f347e9784ff0877052d54011ca
+certificate SHA-256: 4e9e7a806c4aba4c087a568b6866c1cdfa28f4f57bd1270c2f0b89a7a6ed0f77
+graph integrity: vertices=182, edges=273, nonedges=16198, degrees={3: 182}, connected=yes
+graph integrity seconds: 0.002801
+LCF comparison: exact edge-set match; 91 distinct chords, each mentioned twice
+certificate deletion witnesses valid: 273/273
+certificate addition witnesses valid: 16198/16198
+certificate audit seconds: 0.300319
+independent simple 12-cycles: 273
+independent 12-cycle chord histogram: {1: 273}
+unique-chord edge coverage: 273/273; multiplicity exactly one for every edge
+all-cycle enumeration seconds: 0.244543
+direct induced-C12 search in G: none
+direct induced-C12 search seconds: 0.264217
+independent deletion toggles successful: 273/273
+deletion-toggle search seconds: 0.298768
+independent induced 12-vertex paths: 218946
+independent addition toggles successful: 16198/16198
+addition-toggle search seconds: 0.310651
+TOTAL WALL SECONDS: 1.423418
+FINAL RESULT: VERIFIED

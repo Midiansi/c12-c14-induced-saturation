@@ -1,0 +1,9 @@
+VERIFIED: CAT(182,3) is C12-induced-saturated
+vertices: 182
+edges: 273
+nonedges: 16198
+simple 12-cycles: 273
+12-cycle chord histogram: {1: 273}
+edges covered by deletion witnesses: 273
+induced 12-vertex paths: 218946
+nonedges covered by addition witnesses: 16198

@@ -1,0 +1,23 @@
+Command: python3 -B verify_coxeter_C14.py
+Python 3.9.6
+Timing: /usr/bin/time -p
+Graph construction and stored data: exact agreement
+vertices: 28
+edges: 42
+nonedges: 336
+degree sequence: 3^28
+connected: yes
+girth: 7
+diameter: 4
+distance distribution: d1=42, d2=84, d3=168, d4=84
+simple 14-cycles: 420
+chord histogram: 0=0, 1=252, 2=168
+unique-chord incidence: 6 cycles for each of 42 edges
+induced 14-vertex paths (reversal identified): 5040
+endpoint table: d2: 84 x 4; d3: 168 x 18; d4: 84 x 20
+valid deletion cases: 42 / 42
+valid addition cases: 336 / 336
+VERIFIED: the Coxeter graph is C14-induced-saturated
+real 0.20
+user 0.15
+sys 0.02

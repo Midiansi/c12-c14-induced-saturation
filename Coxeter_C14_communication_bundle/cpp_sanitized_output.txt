@@ -1,0 +1,14 @@
+Compiler version:
+Apple clang version 17.0.0 (clang-1700.0.13.5)
+Target: arm64-apple-darwin25.3.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+Compile command: c++ -std=c++20 -O1 -g -fsanitize=address,undefined -fno-omit-frame-pointer verify_no_induced_C14.cpp -o verify_no_induced_C14_sanitized
+Compiler diagnostics: none
+Run command: /usr/bin/time -p ./verify_no_induced_C14_sanitized
+NO induced C14
+14-subsets examined: 40116600
+elapsed seconds: 2.15654
+real 2.94
+user 2.15
+sys 0.04

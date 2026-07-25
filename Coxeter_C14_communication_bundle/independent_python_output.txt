@@ -1,0 +1,17 @@
+Command: python3 -B verify_coxeter_C14_independent.py
+Python 3.9.6
+Timing: /usr/bin/time -p
+Independent construction and stored-data agreement: yes
+cycle method: two internally disjoint 7-edge paths, canonicalized by rotation/reversal
+simple 14-cycles: 420
+chord histogram: 0=0, 1=252, 2=168
+unique-chord incidence: 6 cycles for each of 42 edges
+path method: bit-mask induced-path search
+induced 14-vertex paths (reversal identified): 5040
+endpoint table: d2: 84 x 4; d3: 168 x 18; d4: 84 x 20
+valid deletion cases: 42 / 42
+valid addition cases: 336 / 336
+INDEPENDENTLY VERIFIED: the Coxeter graph is C14-induced-saturated
+real 0.17
+user 0.12
+sys 0.02
