@@ -1,0 +1,29 @@
+# macOS
+.DS_Store
+__MACOSX/
+
+# Python
+__pycache__/
+*.py[cod]
+
+# LaTeX auxiliary files
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
+
+# C/C++ build products
+*.o
+*.out
+verify_no_induced_C14
+verify_no_induced_C14_sanitized
+
+# Editor and temporary files
+*~
+*.bak
+*.tmp
